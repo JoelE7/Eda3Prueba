@@ -1,11 +1,12 @@
-package ar.edu.unlam.pb2.eva03;
+package eva03Test;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import ar.edu.unlam.pb2.eva03.enumeradores.TipoDeBicicleta;
-import ar.edu.unlam.pb2.eva03.enumeradores.TipoDeEvento;
+import Enumeradores.TipoDeBicicleta;
+import Enumeradores.TipoDeEvento;
+import eva03Clases.Club;
 
 public class PruebaEva03 {
 	

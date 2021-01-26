@@ -1,4 +1,4 @@
-package ar.edu.unlam.pb2.eva03.interfaces;
+package Interfaces;
 
 public interface ICorredor {
 

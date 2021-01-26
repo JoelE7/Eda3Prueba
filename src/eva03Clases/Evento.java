@@ -1,11 +1,11 @@
-package ar.edu.unlam.pb2.eva03;
+package eva03Clases;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import ar.edu.unlam.pb2.eva03.enumeradores.TipoDeEvento;
+import Enumeradores.TipoDeEvento;
 
 public class Evento {
 
