@@ -3,9 +3,10 @@ package eva03Clases;
 import Enumeradores.TipoDeBicicleta;
 import Interfaces.ICiclista;
 import Interfaces.ICorredor;
+import Interfaces.INadador;
 
 
-public class Triatleta extends Deportista implements ICiclista,ICorredor {
+public class Triatleta extends Deportista implements ICiclista,ICorredor,INadador {
 
 	private TipoDeBicicleta tipoDeBicicleta;
 	private String distanciaPreferida;

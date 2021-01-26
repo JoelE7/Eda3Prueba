@@ -54,9 +54,9 @@ public class Club {
 		case CARRERA_NATACION_EN_AGUAS_ABIERTAS:
 		case CARRERA_NATACION_EN_PICINA:
 		case DUATLON:
-			if(deportista instanceof INadador) {
+			if (deportista instanceof INadador) {
 				numeroDeInscripcion = deseado.agregarParticipante(deportista);
-			}else {
+			} else {
 				throw new NoEstaPreparado("No esta preparado para nadar");
 			}
 			break;
@@ -64,9 +64,9 @@ public class Club {
 		case TRIATLON_MEDIO:
 		case TRIATLON_OLIMPICO:
 		case TRIATLON_SHORT:
-			if(deportista instanceof ICorredor && deportista instanceof ICiclista) {
+			if (deportista instanceof ICorredor && deportista instanceof ICiclista && deportista instanceof INadador) {
 				numeroDeInscripcion = deseado.agregarParticipante(deportista);
-			}else {
+			} else {
 				throw new NoEstaPreparado("No esta preparado");
 			}
 			break;
