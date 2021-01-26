@@ -2,6 +2,7 @@ package eva03Clases;
 
 import Enumeradores.TipoDeBicicleta;
 
+
 public class Triatleta extends Deportista {
 
 	private TipoDeBicicleta tipoDeBicicleta;
@@ -30,5 +31,4 @@ public class Triatleta extends Deportista {
 		this.distanciaPreferida = distanciaPreferida;
 	}
 
-	
 }

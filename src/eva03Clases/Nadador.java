@@ -1,6 +1,8 @@
 package eva03Clases;
 
-public class Nadador extends Deportista{
+import Interfaces.INadador;
+
+public class Nadador extends Deportista implements INadador{
 
 	private String estiloPreferido;
 	
