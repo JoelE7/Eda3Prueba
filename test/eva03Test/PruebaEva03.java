@@ -9,7 +9,9 @@ import Enumeradores.TipoDeEvento;
 import eva03Clases.Ciclista;
 import eva03Clases.Club;
 import eva03Clases.Corredor;
+import eva03Clases.Deportista;
 import eva03Clases.Nadador;
+import eva03Clases.NoEstaPreparado;
 import eva03Clases.Triatleta;
 
 public class PruebaEva03 {
@@ -69,36 +71,36 @@ public class PruebaEva03 {
 		assertEquals((Integer) 10, actual.getCantidadSocios());		
 	}
 	
-//	@Test (expected = NoEstaPreparado.class)
-//	public void  queUnCorredorNoSePuedaInscribirEnUnaCarreraDeNatacion () throws NoEstaPreparado{	
-//		// En las carreras de natación sólo pueden inscribirse los que sean INadador
-//		Deportista celeste = new Corredor(1000, "Celeste", 10000);
-//		Club actual = new Club("Sitas");
-//		actual.agregarDeportista(celeste);
-//		actual.crearEvento(TipoDeEvento.CARRERA_NATACION_EN_AGUAS_ABIERTAS, "Maraton de aguas abiertas");
-//		
-//		assertNotEquals((Integer)1, actual.inscribirEnEvento("Maraton de aguas abiertas", celeste));		
-//	}
-//	
-//	@Test (expected = NoEstaPreparado.class)
-//	public void  queUnCorredorNoSePuedaInscribirEnUnTriatlon () throws NoEstaPreparado{		
-//		// En los triatlones sólo pueden inscribirse los que sean INadador & ICiclista
-//		Deportista celeste = new Corredor(1000, "Celeste", 10000);
-//		Club actual = new Club("Sitas");
-//		
-//		actual.crearEvento(TipoDeEvento.TRIATLON_IRONMAN, "Triatlon Khona");
-//		
-//		assertNotEquals((Integer)1, actual.inscribirEnEvento("Triatlon Khona", celeste));		
-//	}
-//	
-//	@Test
-//	public void  queUnCorredorPuedaCorrerUnaMaraton() throws NoEstaPreparado{		
-//		Deportista celeste = new Corredor(999, "Celeste", 42000);
-//		Club actual = new Club("Moron");
-//				
-//		((Corredor)celeste).setCantidadDeKilometrosEntrenados(100000);
-//		actual.crearEvento(TipoDeEvento.CARRERA_42K, "Maraton de New York");
-//		
-//		assertEquals((Integer)1, actual.inscribirEnEvento("Maraton de New York", celeste));			
-//	}
+	@Test (expected = NoEstaPreparado.class)
+	public void  queUnCorredorNoSePuedaInscribirEnUnaCarreraDeNatacion () throws NoEstaPreparado{	
+		// En las carreras de natación sólo pueden inscribirse los que sean INadador
+		Deportista celeste = new Corredor(1000, "Celeste", 10000);
+		Club actual = new Club("Sitas");
+		actual.agregarDeportista(celeste);
+		actual.crearEvento(TipoDeEvento.CARRERA_NATACION_EN_AGUAS_ABIERTAS, "Maraton de aguas abiertas");
+		
+		assertNotEquals((Integer)1, actual.inscribirEnEvento("Maraton de aguas abiertas", celeste));		
+	}
+	
+	@Test (expected = NoEstaPreparado.class)
+	public void  queUnCorredorNoSePuedaInscribirEnUnTriatlon () throws NoEstaPreparado{		
+		// En los triatlones sólo pueden inscribirse los que sean INadador & ICiclista
+		Deportista celeste = new Corredor(1000, "Celeste", 10000);
+		Club actual = new Club("Sitas");
+		
+		actual.crearEvento(TipoDeEvento.TRIATLON_IRONMAN, "Triatlon Khona");
+		
+		assertNotEquals((Integer)1, actual.inscribirEnEvento("Triatlon Khona", celeste));		
+	}
+	
+	@Test
+	public void  queUnCorredorPuedaCorrerUnaMaraton() throws NoEstaPreparado{		
+		Deportista celeste = new Corredor(999, "Celeste", 42000);
+		Club actual = new Club("Moron");
+				
+		((Corredor)celeste).setCantidadDeKilometrosEntrenados(100000);
+		actual.crearEvento(TipoDeEvento.CARRERA_42K, "Maraton de New York");
+		
+		assertEquals((Integer)1, actual.inscribirEnEvento("Maraton de New York", celeste));			
+	}
 }
